@@ -1,0 +1,206 @@
+.contact {
+   display: flex;
+   flex-wrap: wrap;
+   padding: 6rem 0;
+
+   @media only screen and (max-width:$bp-larger) {
+      flex-direction: column;
+   }
+
+   @media only screen and (max-width:$bp-smaller) {
+      flex-wrap: nowrap;
+   }
+
+   & > * {
+      flex-basis: 50%;
+   }
+
+
+   &__info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @media only screen and (max-width:$bp-larger) {
+         flex-direction: row;
+         flex-wrap: wrap;
+      }
+
+      @media only screen and (max-width:$bp-big) {
+         flex-direction: column;
+      }
+
+      &__heading {
+         margin-bottom: 3rem;
+         text-transform: uppercase;
+
+         @media only screen and (max-width:$bp-larger) {
+            flex-basis: 100%;
+            text-align: center;
+         }
+
+         @media only screen and (max-width:$bp-smaller) {
+            flex-basis: 100%;
+         }
+      }
+
+      &__item {   // ITEM Styling Starts here
+
+         display: flex;
+         align-items: center;
+         margin: 1.5rem 0;
+         width: 35%;
+
+         @media only screen and (max-width:$bp-larger) {
+            flex-wrap: wrap;
+            flex-basis: 30%;
+            justify-content: center;
+         }
+
+         @media only screen and (max-width:$bp-medium) {
+            width: 80%;
+         }
+
+         &:nth-child(3) {
+            @media only screen and (max-width:$bp-big) {
+               margin-left: -1rem;
+            }
+         }
+
+         &:last-child {
+            @media only screen and (max-width:$bp-big) {
+               margin-left: 5rem;
+            }
+         }
+
+         &--logo {
+            width: 5.5rem;
+            height: 5.5rem;
+            background-color: $color-primary;
+            border-radius: 50%;
+            margin-right: 1.5rem;
+
+            @media only screen and (max-width:$bp-smaller) {
+               width: 4.5rem;
+               height: 4.5rem;
+            }
+
+            svg {
+               width: 50%;
+               height: 50%;
+               transform: translate(50%, 50%);
+               fill: #fff;
+            }
+         }
+
+         &--detail {
+
+            &__heading {
+               font-weight: bold;
+               font-size: 1.6rem;
+               text-transform: uppercase;
+               margin: 3px 0;
+               color: $color-grey-dark-1;
+            }
+
+            &__value {
+               font-size: 1.3rem;
+               margin: 3px 0;
+               color: $color-grey-dark-2;
+            }
+         }
+      }
+   }
+
+   &__form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @media only screen and (max-width:$bp-larger) {
+         align-items: center;
+         margin-top: 5rem;
+      }
+
+      @media only screen and (max-width:$bp-big) {
+         margin: 0;
+      }
+
+      @media only screen and (max-width:$bp-medium) {
+         margin: 4rem;
+      }
+
+      @media only screen and (max-width:$bp-smaller) {
+         margin: 4;
+      }
+      
+      &__heading {
+         text-transform: uppercase;
+         align-self: flex-start;
+         margin-bottom: 3rem;
+         color: #333;
+      }
+
+      &__form-group {
+         display: flex;
+         // flex-wrap: wrap;
+         width: 80%;
+         align-items: center;
+         margin-bottom: 1rem;
+         color: $color-grey-light-2;
+
+         @media only screen and (max-width:$bp-smaller) {
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+         }         
+         
+         input, textarea {
+            flex-basis: 80%;
+            padding: 1rem .5rem;
+            border: none;
+            background-color: transparent;
+            border-bottom: 2px solid $color-grey-light-2;
+            transition: all .2s;
+            font-family: cursive;
+
+            @media only screen and (max-width:$bp-smaller) {
+               flex-basis: 100%;
+               width: 100%;
+            }
+
+            &:focus {
+               outline: none;
+               border-bottom: 2px solid $color-grey-dark-3;
+            }
+         }
+
+         label {
+            flex-basis: 10%;
+            font-size: 1.4rem;
+            color: #333;
+            margin-right: 1.2rem;
+         }
+
+         .textarea-label {
+            align-self: flex-start;
+            margin-top: .5rem;
+
+            @media only screen and (max-width:$bp-smaller) {
+               align-self: center;
+            }
+         }
+
+         & button {
+            margin-top: 2rem;
+            margin-left: 7.3rem;
+
+            @media only screen and (max-width:$bp-smaller) {
+               margin: 0;
+               margin-top: 2rem;
+            }
+         }
+      }
+   }
+}

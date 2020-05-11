@@ -1,0 +1,33 @@
+.btn {
+   display: inline-block;
+   border: none;
+   padding: 1.5rem 2.5rem;
+   text-transform: uppercase;
+   font-weight: bold;
+   cursor: pointer;
+   transition: all .2s;
+
+   &__primary {
+      background-color: $color-primary;
+      color: #fff;
+
+      &:hover,
+      &:active,
+      &:focus {
+         background-color: #c9532c;
+         outline: none;
+      }
+   }
+
+   &__secondary {
+      background-color: $color-secondary;
+      color: #fff;
+      
+      &:hover,
+      &:active,
+      &:focus {
+         background-color: #543f65;
+         outline: none;
+      }
+   }
+}

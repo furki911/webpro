@@ -1,0 +1,67 @@
+.about-company {
+
+   background: $color-secondary;
+   display: flex;
+   color: #fff;
+
+
+   &__img {
+      flex-basis: 50%;
+      background-image: url(../img/we-are-creative.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+
+      @media only screen and (max-width:$bp-big) {
+         display: none;
+      }
+   }
+
+   &__content {
+      flex-basis: 60%;
+      font-size: 1.2rem;
+      padding: 8rem 10rem;
+      line-height: 1.6;
+
+      @media only screen and (max-width:$bp-large) {
+         padding-right: 1.8rem;
+         padding-left: 5rem;
+      }
+
+      @media only screen and (max-width:$bp-big) {
+         flex-basis: 100%;
+         padding: 8rem 10rem;
+      }
+
+      @media only screen and (max-width:$bp-small) {
+         padding: 8rem 2rem;
+      }
+
+      &__heading {
+         text-transform: uppercase;
+         line-height: 1;
+         line-height: 1.2;
+      }
+
+      &__sub-heading {
+         margin: 2rem 0;
+         width: 65%;
+         font-weight: bold;
+         color: $color-grey-light-1;
+      }
+
+      &__paragraph {
+         margin: 2rem 0;
+         width: 75%;
+         color: $color-grey-light-4;
+
+         @media only screen and (max-width:$bp-large) {
+            width: 90%;
+         }
+      }
+
+      & > button {
+         margin-top: 3rem;
+      }
+   }
+}

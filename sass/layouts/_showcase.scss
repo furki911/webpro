@@ -1,0 +1,50 @@
+.showcase {
+   background-image: linear-gradient(rgba(#000,.6), rgba(#000,.6)),
+   url(../img/showcase.png);
+   background-position: center center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   padding: 13rem 0;
+
+   @include clearfix;
+
+   &__content {
+      height: 100%;
+      width: 50%;
+      float: right;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      color: #fff;
+
+      @media only screen and (max-width:$bp-big) {
+         width: 100%;
+         align-items: center;
+      }
+
+      &__heading {
+         line-height: .8;
+         text-transform: uppercase;
+
+         @media only screen and (max-width:$bp-big) {
+            text-align: center;
+         }
+      }
+
+      &__paragraph {
+         line-height: 1.6;
+         font-size: 1.2rem;
+         width: 70%;
+         margin: 3rem 0;
+
+         @media only screen and (max-width:$bp-big) {
+            text-align: center;
+         }
+      }
+
+      & > button {
+         margin: 1rem 0;
+      }
+   }
+}
