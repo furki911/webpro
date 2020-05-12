@@ -24,10 +24,12 @@
       @media only screen and (max-width:$bp-larger) {
          flex-direction: row;
          flex-wrap: wrap;
+         margin: 0 auto;
       }
 
       @media only screen and (max-width:$bp-big) {
          flex-direction: column;
+         align-items: baseline;
       }
 
       &__heading {
@@ -57,20 +59,9 @@
             justify-content: center;
          }
 
-         @media only screen and (max-width:$bp-medium) {
-            width: 80%;
-         }
-
-         &:nth-child(3) {
-            @media only screen and (max-width:$bp-big) {
-               margin-left: -1rem;
-            }
-         }
-
-         &:last-child {
-            @media only screen and (max-width:$bp-big) {
-               margin-left: 5rem;
-            }
+         @media only screen and (max-width:$bp-big) {
+            width: 100%;
+            justify-content: flex-start;
          }
 
          &--logo {
